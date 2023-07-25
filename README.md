@@ -2,9 +2,9 @@
 
 This template provides a stater setup to get React working in Vite with TailwindCss installed.
 
-## Codes Used
+# Codes Used
 
-# Install vite + react
+## Install vite + react
 
 npm create vite@latest ./
 Select a framework: React
@@ -18,7 +18,7 @@ npm run dev
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-# replace tailwind.config.js inner codes with
+### replace tailwind.config.js inner codes with
 
 /** @type {import('tailwindcss').Config} \*/
 export default {
@@ -32,7 +32,7 @@ extend: {},
 plugins: [],
 }
 
-# Paste these lines in index.css
+## Paste these lines in index.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
