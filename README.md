@@ -30,7 +30,7 @@
 </div>
 <br />
 
-This template provides a stater setup to get React working in Vite with TailwindCSS installed.
+<p align="center">This template provides a stater setup to get React working in Vite with TailwindCSS installed.</p>
 
 
 ---
