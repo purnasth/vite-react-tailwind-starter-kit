@@ -32,8 +32,8 @@
 
 <p align="center">This template provides a stater setup to get React working in Vite with TailwindCSS installed.</p>
 
-
 ---
+
 ## Getting Started`*`
 
 ### 1. Clone this repo`*`
@@ -54,7 +54,8 @@ npm run dev
 - <b><em>`npm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
 - <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
 
-------
+---
+
 ## Codes Used
 
 <b>`NOTE:`
@@ -67,10 +68,15 @@ Please disregard these below provided codes if you've already completed the firs
 
 ```sh
 npm create vite@latest ./
+# y to proceed
 # Select a framework: React
 # Select a variant: JavaScript + SWC
 npm install
 npm run dev
+```
+
+```sh
+npm run dev -- --host
 ```
 
 ### Install tailwindCSS
@@ -104,18 +110,26 @@ plugins: [],
 @tailwind utilities;
 ```
 
-### Import react icons
-
-```sh
-npm install react-icons --save
-```
-
 ### Import axios
 
 ```sh
 npm install axios
 ```
+
+### Import react icons
+
+```sh
+npm install react-icons
+```
+
+### Import react-router-dom
+
+```sh
+npm install react-router-dom
+```
+
 ---
+
 <!--
 
 <details>
@@ -190,7 +204,5 @@ npm install axios
 
 <br/>
 </details> -->
-
-
 
 ⭐ Star this repo on GitHub — it helps!
