@@ -128,6 +128,12 @@ npm install react-icons
 npm install react-router-dom
 ```
 
+### Import gsap
+
+```sh
+npm i @gsap/react
+```
+
 ---
 
 <!--
