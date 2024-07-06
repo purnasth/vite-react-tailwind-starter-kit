@@ -1,7 +1,7 @@
 <h1 align="center">
   <img
       src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&color=9f4bff&size=30&center=true&vCenter=true&width=500&lines=Vite++React++TailwindCSS+Starter+Kit;"
-      alt="Vite + React + TailwindCSS Starter Kit"
+      alt="Vite + React + TailwindCSS Starter Kit v18.2.0"
   />
 </h1>
   <br/>
