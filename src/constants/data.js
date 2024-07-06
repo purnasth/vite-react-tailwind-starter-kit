@@ -8,18 +8,18 @@ export const navLinks = [
     id: "about",
     title: "About",
     path: "/about",
-    sublinks: [
-      {
-        id: "purna",
-        title: "Purna",
-        path: "/about/purna",
-      },
-      {
-        id: "shrestha",
-        title: "Shrestha",
-        path: "/about/shrestha",
-      },
-    ],
+    // sublinks: [
+    //   {
+    //     id: "purna",
+    //     title: "Purna",
+    //     path: "/about/purna",
+    //   },
+    //   {
+    //     id: "shrestha",
+    //     title: "Shrestha",
+    //     path: "/about/shrestha",
+    //   },
+    // ],
   },
   {
     id: "contact",

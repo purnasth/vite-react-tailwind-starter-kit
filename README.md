@@ -110,6 +110,20 @@ plugins: [],
 @tailwind utilities;
 ```
 
+<details>
+<summary> Update outdated packages </summary>
+
+### Test & Update outdated packages
+
+```sh
+npm outdated
+```
+
+```sh
+npm update
+```
+
+</details>
 ### Import axios
 
 ```sh

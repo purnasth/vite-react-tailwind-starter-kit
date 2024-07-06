@@ -1,5 +1,6 @@
 import React from "react";
 import { navLinks } from "../constants/data";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,14 +10,7 @@ const Navbar = () => {
       <ul>
         {navLinks.map((link) => (
           <li key={link.id}>
-            {link.title}
-            {link.sublinks && (
-              <ul>
-                {link.sublinks.map((sublink) => (
-                  <li key={sublink.id}>{sublink.title}</li>
-                ))}
-              </ul>
-            )}
+            <NavLink to={link.path}>{link.title}</NavLink>
           </li>
         ))}
       </ul>
