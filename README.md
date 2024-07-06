@@ -1,7 +1,7 @@
 <h1 align="center">
   <img
       src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&color=9f4bff&size=30&center=true&vCenter=true&width=500&lines=Vite++React++TailwindCSS+Starter+Kit;"
-      alt="Vite + React + TailwindCSS Starter Kit"
+      alt="Vite + React + TailwindCSS + TypeScript Starter Kit"
   />
 </h1>
   <br/>
@@ -42,6 +42,10 @@
 git clone https://github.com/purnasth/vite-react-tailwind-starter.git
 ```
 
+```sh
+git checkout vrt-ts
+```
+
 ### 2. Install and Run`*`
 
 Run the following commands in your terminal:
@@ -70,7 +74,7 @@ Please disregard these below provided codes if you've already completed the firs
 npm create vite@latest ./
 # y to proceed
 # Select a framework: React
-# Select a variant: JavaScript + SWC
+# Select a variant: TypeScript + SWC
 npm install
 npm run dev
 ```
@@ -108,6 +112,28 @@ plugins: [],
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+### `React is not defined` error
+
+If you encounter the error `React is not defined` or `React is defined but never used`, add the following line to the top of your `tsconfig.json` file:
+
+```json
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}
 ```
 
 ### Import axios

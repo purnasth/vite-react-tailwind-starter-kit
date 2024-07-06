@@ -2,8 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* //yourClassName {
-    @apply ....//your tailwindcss here;
-  } */
-}
+@import "virtual:windi.css";
