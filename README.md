@@ -42,6 +42,26 @@
 git clone https://github.com/purnasth/vite-react-tailwind-starter.git
 ```
 
+### &rarr; for `jsx`
+
+<!-- how to print arrow in markdown ?
+https://stackoverflow.com/questions/30003353/how-to-write-an-arrow-in-markdown 
+ -->
+
+```sh
+git checkout vrt
+```
+
+#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt
+
+### &rarr; for `TypeScript`
+
+```sh
+git checkout vrt-ts
+```
+
+#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts
+
 ### 2. Install and Run`*`
 
 Run the following commands in your terminal:
@@ -55,160 +75,5 @@ npm run dev
 - <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
 
 ---
-
-## Codes Used
-
-<b>`NOTE:`
-<em>
-Please disregard these below provided codes if you've already completed the first two steps of the "Getting Started" section. It's only meant for those interested in manually creating a Vite + React project with TailwindCSS.
-</em>
-</b>
-
-### Install vite + react
-
-```sh
-npm create vite@latest ./
-# y to proceed
-# Select a framework: React
-# Select a variant: JavaScript + SWC
-npm install
-npm run dev
-```
-
-```sh
-npm run dev -- --host
-```
-
-### Install tailwindCSS
-
-```sh
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-### Replace <em>`tailwind.config.js`</em> inner codes with
-
-```
-/** @type {import('tailwindcss').Config} \*/
-export default {
-content: [
-"./index.html",
-"./src/**/\*.{js,ts,jsx,tsx}",
-],
-theme: {
-extend: {},
-},
-plugins: [],
-}
-```
-
-### Paste these lines in <em>`index.css`</em>
-
-```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-### Import axios
-
-```sh
-npm install axios
-```
-
-### Import react icons
-
-```sh
-npm install react-icons
-```
-
-### Import react-router-dom
-
-```sh
-npm install react-router-dom
-```
-
-### Import gsap
-
-```sh
-npm i @gsap/react
-```
-
----
-
-<!--
-
-<details>
-<summary><h4>Install vite + react</h4></summary>
-<br/>
-<p>
-npm create vite@latest ./
-<br/>
-Select a framework: React
-<br/>
-Select a variant: JavaScript + SWC
-<br/>
-npm install
-<br/>
-npm run dev
-</p>
-<br/>
-</details>
-<details>
-<summary><h4>Install tailwindCSS</h4></summary>
-<br/>
-<p align="center">
-npm install -D tailwindcss postcss autoprefixer
-<br/>
-npx tailwindcss init -p
-</p>
-<br/>
-<br/>
-<h4 align="center">Replace tailwind.config.js inner codes with</h4>
-<br/>
-<p align="center">
-/** @type {import('tailwindcss').Config} \*/ <br/>
-export default { <br/>
-content: [ <br/>
-"./index.html", <br/>
-"./src/**/\*.{js,ts,jsx,tsx}", <br/>
-], <br/>
-theme: { <br/>
-extend: {}, <br/>
-}, <br/>
-plugins: [], <br/>
-} <br/>
-</p>
-
-<br/>
-<h4 align="center">Paste these lines in index.css</h4>
-<br/>
-<br/>
-<p align="center">
-@tailwind base;<br/>
-@tailwind components;<br/>
-@tailwind utilities;<br/>
-</p>
-
-</details>
-
-<details>
-<summary><h4>Import react icons</h4></summary>
-<br/>
-<p align="center">
-npm install react-icons --save</p>
-
-<br/>
-</details>
-
-<details>
-<summary><h4>Import axios</h4></summary>
-<br/>
-<p align="center">
-npm install axios
-</p>
-
-<br/>
-</details> -->
 
 ⭐ Star this repo on GitHub — it helps!
