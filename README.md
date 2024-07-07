@@ -55,8 +55,8 @@ npm install
 npm run dev
 ```
 
-- <b><em>`npm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
-- <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
+-   <b><em>`npm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
+-   <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
 
 ---
 
@@ -120,121 +120,20 @@ If you encounter the error `React is not defined` or `React is defined but never
 
 ```json
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
+    "files": [],
+    "references": [
+        {
+            "path": "./tsconfig.app.json"
+        },
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ],
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "react"
     }
-  ],
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
 }
 ```
-
-### Import axios
-
-```sh
-npm install axios
-```
-
-### Import react icons
-
-```sh
-npm install react-icons
-```
-
-### Import react-router-dom
-
-```sh
-npm install react-router-dom
-```
-
-### Import gsap
-
-```sh
-npm i @gsap/react
-```
-
----
-
-<!--
-
-<details>
-<summary><h4>Install vite + react</h4></summary>
-<br/>
-<p>
-npm create vite@latest ./
-<br/>
-Select a framework: React
-<br/>
-Select a variant: JavaScript + SWC
-<br/>
-npm install
-<br/>
-npm run dev
-</p>
-<br/>
-</details>
-<details>
-<summary><h4>Install tailwindCSS</h4></summary>
-<br/>
-<p align="center">
-npm install -D tailwindcss postcss autoprefixer
-<br/>
-npx tailwindcss init -p
-</p>
-<br/>
-<br/>
-<h4 align="center">Replace tailwind.config.js inner codes with</h4>
-<br/>
-<p align="center">
-/** @type {import('tailwindcss').Config} \*/ <br/>
-export default { <br/>
-content: [ <br/>
-"./index.html", <br/>
-"./src/**/\*.{js,ts,jsx,tsx}", <br/>
-], <br/>
-theme: { <br/>
-extend: {}, <br/>
-}, <br/>
-plugins: [], <br/>
-} <br/>
-</p>
-
-<br/>
-<h4 align="center">Paste these lines in index.css</h4>
-<br/>
-<br/>
-<p align="center">
-@tailwind base;<br/>
-@tailwind components;<br/>
-@tailwind utilities;<br/>
-</p>
-
-</details>
-
-<details>
-<summary><h4>Import react icons</h4></summary>
-<br/>
-<p align="center">
-npm install react-icons --save</p>
-
-<br/>
-</details>
-
-<details>
-<summary><h4>Import axios</h4></summary>
-<br/>
-<p align="center">
-npm install axios
-</p>
-
-<br/>
-</details> -->
 
 ⭐ Star this repo on GitHub — it helps!
