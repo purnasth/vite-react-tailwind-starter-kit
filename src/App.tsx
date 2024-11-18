@@ -1,13 +1,23 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import Home from './pages/Home';
+import RouterToTop from './utils/RouterToTop';
 
 const App: React.FC = () => {
   return (
     <>
-      <main className="flex h-screen w-full items-center justify-center">
-        <h1 className="text-center font-serif text-5xl capitalize">
-          Welcome to Vite + React and tailwindCSS starter Kit
-        </h1>
-      </main>
+      <Router>
+        <RouterToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </>
   );
 };

@@ -263,4 +263,29 @@ Cheers! Now on every save, your code will be auto-formatted. Congratulations!
 
 ---
 
+## Libraries `pnpm`
+
+```
+pnpm install react-router-dom
+pnpm install react-icons
+```
+<!-- pnpm install react-router-dom
+pnpm install react-icons
+pnpm install react-helmet
+pnpm install react-query
+pnpm install react-toastify
+pnpm install react-modal
+pnpm install react-select
+pnpm install react-datepicker
+pnpm install react-table
+pnpm install react-hook-form
+pnpm install react-markdown
+pnpm install react-syntax-highlighter
+pnpm install react-draggable
+pnpm install react-beautiful-dnd
+pnpm install react-spring
+pnpm install react-use
+pnpm install react-use-gesture
+pnpm install react-use-measure -->
+
 ⭐ Star this repo on GitHub — it helps!
