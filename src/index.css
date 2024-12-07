@@ -1,3 +1,138 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+    font-family: 'Kaftan Serif';
+    src: url('./assets/fonts/KaftanSerif.woff2');
+  }
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  @layer components {
+    ::selection {
+      @apply text-light bg-dark;
+    }
+  
+    /* * {
+          scrollbar-width: thin;
+        } */
+    ::-webkit-scrollbar {
+      @apply w-0;
+    }
+  
+    .scroll::-webkit-scrollbar {
+      @apply bg-light w-1 rounded-full;
+    }
+  
+    .scroll::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-orange-300;
+    }
+  
+    /* ::-webkit-scrollbar {
+        @apply w-2 rounded-full bg-transparent;
+      }
+    
+      ::-webkit-scrollbar-track {
+        @apply bg-transparent rounded-full;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        @apply bg-coffee-700 rounded-full border border-solid border-coffee-400;
+      }
+    
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-coffee-800;
+      } */
+  
+    body {
+      @apply font-body;
+    }
+  
+    main,
+    section,
+    div {
+      @apply font-body;
+    }
+  
+    .navlink,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-title;
+    }
+  
+    label,
+    a,
+    input,
+    textarea,
+    button,
+    ul,
+    li {
+      @apply font-body font-light;
+    }
+  
+    p,
+    span {
+      @apply font-body font-normal;
+    }
+  
+    main {
+      @apply relative z-10 px-4 py-12 sm:py-24 md:px-12 md:py-32 lg:py-36 xl:px-16 xl:py-48;
+    }
+  
+    /* section {
+        @apply py-24 md:py-32 lg:py-48 px-4;
+      } */
+  
+    .filter-white {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    }
+  
+    .filter-black {
+      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
+    }
+  
+    .transition-300 {
+      @apply transition-all duration-300 ease-linear;
+    }
+  
+    .transition-700 {
+      @apply transition-all duration-700 ease-in-out;
+    }
+  
+    .transition-1000 {
+      @apply transition-all duration-1000;
+    }
+  
+    .navlink {
+      @apply transition-300 inline-flex w-full items-center justify-between pb-2 text-2xl font-bold capitalize text-dark group-hover:font-bold group-hover:tracking-wider;
+    }
+  
+    .overlay {
+      @apply absolute inset-0 bg-black/20 z-0 pointer-events-none select-none;
+    }
+  }
+  
+  /* lenis */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
