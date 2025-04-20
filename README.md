@@ -32,49 +32,11 @@
 
 <p align="center">This template provides a stater setup to get React working in Vite with TailwindCSS installed.</p>
 
----
+## Quick Overview
 
-## Getting Started`*`
-
-### 1. Clone this repo`*`
-
-```sh
-git clone https://github.com/purnasth/vite-react-tailwind-starter.git
-```
-
-### &rarr; for `jsx`
-
-<!-- how to print arrow in markdown ?
-https://stackoverflow.com/questions/30003353/how-to-write-an-arrow-in-markdown 
- -->
-
-```sh
-git checkout vrt
-```
-
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt
-
-### &rarr; for `TypeScript`
-
-```sh
-git checkout vrt-ts
-```
-
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts
-
-#
-
-### 2. Install and Run`*`
-
-Run the following commands in your terminal:
-
-```sh
-npm install
-npm run dev
-```
-
-- <b><em>`npm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
-- <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
+- Vite + React + TailwindCSS + Prettier (Auto Formatting) with pnpm
+- Vite version: 4.0.0
+- TailwindCSS version: 3.4
 
 ---
 
@@ -86,16 +48,7 @@ npm run dev
 git clone https://github.com/purnasth/vite-react-tailwind-starter.git
 ```
 
-
-### &rarr; for `pnpm TypeScript + Tailwindcss + Prettier (Auto Formatting)`
-
-```sh
-the main branch
-```
-
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/
-
-#
+- `cd vite-react-tailwind-starter` to navigate into the cloned directory.
 
 ### 2. Install and Run`*`
 
@@ -132,7 +85,7 @@ pnpm run dev
 ```
 
 ```sh
-npm run dev -- --host
+pnpm run dev -- --host
 ```
 
 ### Install tailwindCSS
