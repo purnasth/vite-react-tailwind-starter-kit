@@ -3,17 +3,6 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        dark: '#111111',
-        light: '#f5f5f5',
-      },
-      fontFamily: {
-        title: ['"Purna Title"', 'Georgia', 'Cambria', 'serif'],
-        body: ['"Purna Body"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-      },
-      fontSize: {
-        inherit: 'inherit',
-      },
       screens: {
         sm: '640px',
         md: '768px',

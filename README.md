@@ -1,36 +1,4 @@
-<h1 align="center">
-  <img
-      src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&color=9f4bff&size=30&center=true&vCenter=true&width=500&lines=Vite++React++TailwindCSS+Starter+Kit;"
-      alt="Vite + React + TailwindCSS Starter Kit"
-  />
-</h1>
-  <br/>
-
-<div align="center">
-  <img
-    alt="GitHub repo size"
-    src="https://img.shields.io/github/repo-size/purnasth/vite-react-tailwind-starter?color=9f4bff&logo=github&style=for-the-badge&logoColor=9f4bff"
-  />
-  <img
-    alt="GitHub forks"
-    src="https://img.shields.io/github/forks/purnasth/vite-react-tailwind-starter?color=9f4bff&logo=github&style=for-the-badge&logoColor=9f4bff"
-  />
-  <img
-    alt="GitHub Repo stars"
-    src="https://img.shields.io/github/stars/purnasth/vite-react-tailwind-starter?color=9f4bff&logo=github&style=for-the-badge&logoColor=9f4bff"
-  />
-  <img
-    alt="Last commit"
-    src="https://img.shields.io/github/last-commit/purnasth/vite-react-tailwind-starter?color=9f4bff&logo=git&logoColor&style=for-the-badge"
-  />
-  <img
-    alt="Commit activity"
-    src="https://img.shields.io/github/commit-activity/m/purnasth/vite-react-tailwind-starter?color=9f4bff&logo=git&logoColor&style=for-the-badge"
-  />
-</div>
-<br />
-
-<p align="center">This template provides a stater setup to get React working in Vite with TailwindCSS installed.</p>
+# Vite + React + TailwindCSS(4) Starter Kit
 
 ---
 
@@ -52,7 +20,7 @@ https://stackoverflow.com/questions/30003353/how-to-write-an-arrow-in-markdown
 git checkout vrt
 ```
 
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt
+#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt
 
 ### &rarr; for `TypeScript`
 
@@ -60,21 +28,29 @@ git checkout vrt
 git checkout vrt-ts
 ```
 
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts
+#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts
 
-#
+### &rarr; for `react-with-tailwind(v3)`
+
+```sh
+git checkout tailwind-v3
+```
+
+#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/tailwind-v3
+
+---
 
 ### 2. Install and Run`*`
 
 Run the following commands in your terminal:
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
-- <b><em>`npm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
-- <b><em>`npm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
+- <b><em>`pnpm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
+- <b><em>`pnpm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
 
 ---
 
@@ -90,7 +66,7 @@ git clone https://github.com/purnasth/vite-react-tailwind-starter.git
 ### &rarr; for `pnpm TypeScript + Tailwindcss + Prettier (Auto Formatting)`
 
 ```sh
-the main branch
+the `main` branch
 ```
 
 #### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/
@@ -138,77 +114,31 @@ npm run dev -- --host
 ### Install tailwindCSS
 
 ```sh
-pnpm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+pnpm install tailwindcss @tailwindcss/vite
 ```
 
-### Replace <em>`tailwind.config.js`</em> inner codes with
+### Configure the Vite plugin `vite.config.ts`
+Update the file `vite.config.ts` file:
+```ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
 
-```
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        dark: "#111111",
-      },
-      fontSize: {
-        inherit: "inherit",
-      },
-      screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1600px",
-        "3xl": "1920px",
-      },
-      container: {
-        center: true,
-        padding: "1rem",
-        screens: {
-          sm: "100%",
-          md: "100%",
-          lg: "1024px",
-          xl: "1280px",
-          "2xl": "1600px",
-        },
-      },
-    },
-  },
-  plugins: [],
-};
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
 ```
 
-### Paste these lines in <em>`index.css`</em>
-
+### Import Tailwind CSS styles `index.css`
+Create a file named `index.css` in the `src` directory and add the following lines:
+```css
+@import "tailwindcss";
 ```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
+`NOTE`: In case you are migrating from tailwindcss v3.4 to v4.0, link your existing `tailwind.config.js` file to the new `index.css` file.
 
-### `React is not defined` error
-
-If you encounter the error `React is not defined` or `React is defined but never used`, add the following line to the top of your `tsconfig.json` file:
-
-```json
-{
-    "files": [],
-    "references": [
-        {
-            "path": "./tsconfig.app.json"
-        },
-        {
-            "path": "./tsconfig.node.json"
-        }
-    ],
-    "compilerOptions": {
-        "jsx": "react-jsx",
-        "jsxImportSource": "react"
-    }
-}
+```css
+@config "../tailwind.config.js";
 ```
 
 ### Install Prettier

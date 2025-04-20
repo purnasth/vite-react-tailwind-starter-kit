@@ -1,33 +1,36 @@
-@font-face {
-    font-family: 'Kaftan Serif';
-    src: url('./assets/fonts/KaftanSerif.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import 'tailwindcss';
+
+@config "../tailwind.config.js";
+
+@theme {
+  --font-body: 'Bricolage Grotesque', sans-serif;
+  --font-title: 'Bricolage Grotesque', sans-serif;
+  --dark: #111111;
+  --light: #f5f5f5;
+}
+
+@layer components {
+  ::selection {
+    @apply bg-dark text-light;
   }
-  
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
-  @layer components {
-    ::selection {
-      @apply text-light bg-dark;
-    }
-  
-    /* * {
+
+  /* * {
           scrollbar-width: thin;
         } */
-    ::-webkit-scrollbar {
-      @apply w-0;
-    }
-  
-    .scroll::-webkit-scrollbar {
-      @apply bg-light w-1 rounded-full;
-    }
-  
-    .scroll::-webkit-scrollbar-thumb {
-      @apply rounded-full bg-orange-300;
-    }
-  
-    /* ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  .scroll::-webkit-scrollbar {
+    @apply w-1 rounded-full bg-light;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-orange-300;
+  }
+
+  /* ::-webkit-scrollbar {
         @apply w-2 rounded-full bg-transparent;
       }
     
@@ -42,97 +45,77 @@
       ::-webkit-scrollbar-thumb:hover {
         @apply bg-coffee-800;
       } */
-  
-    body {
-      @apply font-body;
-    }
-  
-    main,
-    section,
-    div {
-      @apply font-body;
-    }
-  
-    .navlink,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      @apply font-title;
-    }
-  
-    label,
-    a,
-    input,
-    textarea,
-    button,
-    ul,
-    li {
-      @apply font-body font-light;
-    }
-  
-    p,
-    span {
-      @apply font-body font-normal;
-    }
-  
-    main {
-      @apply relative z-10 px-4 py-12 sm:py-24 md:px-12 md:py-32 lg:py-36 xl:px-16 xl:py-48;
-    }
-  
-    /* section {
+
+  body {
+    @apply font-body;
+  }
+
+  main,
+  section,
+  div {
+    @apply font-body;
+  }
+
+  .navlink,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-title;
+  }
+
+  label,
+  a,
+  input,
+  textarea,
+  button,
+  ul,
+  li {
+    @apply font-body font-light;
+  }
+
+  p,
+  span {
+    @apply font-body font-normal;
+  }
+
+  main {
+    @apply relative z-10 px-4 py-12 sm:py-24 md:px-12 md:py-32 lg:py-36 xl:px-16 xl:py-48;
+  }
+
+  /* section {
         @apply py-24 md:py-32 lg:py-48 px-4;
       } */
-  
-    .filter-white {
-      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    }
-  
-    .filter-black {
-      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
-    }
-  
-    .transition-300 {
-      @apply transition-all duration-300 ease-linear;
-    }
-  
-    .transition-700 {
-      @apply transition-all duration-700 ease-in-out;
-    }
-  
-    .transition-1000 {
-      @apply transition-all duration-1000;
-    }
-  
-    .navlink {
-      @apply transition-300 inline-flex w-full items-center justify-between pb-2 text-2xl font-bold capitalize text-dark group-hover:font-bold group-hover:tracking-wider;
-    }
-  
-    .overlay {
-      @apply absolute inset-0 bg-black/20 z-0 pointer-events-none select-none;
-    }
+
+  .filter-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(288deg) brightness(102%) contrast(102%);
   }
-  
-  /* lenis */
-  html.lenis,
-  html.lenis body {
-    height: auto;
+
+  .filter-black {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%)
+      hue-rotate(327deg) brightness(96%) contrast(104%);
   }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+
+  .transition-300 {
+    @apply transition-all duration-300 ease-linear;
   }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+
+  .transition-700 {
+    @apply transition-all duration-700 ease-in-out;
   }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
+
+  .transition-1000 {
+    @apply transition-all duration-1000;
   }
-  
-  .lenis.lenis-smooth iframe {
-    pointer-events: none;
+
+  .navlink {
+    @apply inline-flex w-full items-center justify-between pb-2 text-2xl font-bold capitalize text-dark group-hover:font-bold group-hover:tracking-wider;
   }
+
+  .overlay {
+    @apply pointer-events-none absolute inset-0 z-0 select-none bg-black/20;
+  }
+}

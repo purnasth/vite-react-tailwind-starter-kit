@@ -5,7 +5,7 @@ const Intro = () => {
     <>
       <main className="relative z-auto h-screen w-full bg-white/50">
         <div
-          className="pointer-events-none absolute inset-0 -z-10 size-full select-none bg-cover"
+          className="pointer-events-none absolute inset-0 -z-10 size-full bg-cover select-none"
           style={{
             backgroundImage:
               'url("https://aasrahospitality.purnashrestha.com.np/assets/whitegradient-BOMfrnNs.avif")',
@@ -20,12 +20,12 @@ const Intro = () => {
             />
           </Link>
 
-          <h1 className="font-title mt-4 text-5xl capitalize leading-snug">
-            Welcome to Vite + React and tailwindCSS starter Kit
+          <h1 className="font-title mt-4 text-5xl leading-snug capitalize">
+            Welcome to Vite + React and tailwindCSS(v4) starter Kit
           </h1>
 
           <p className="font-body max-w-3xl">
-            This is a starter kit for Vite + React and tailwindCSS. It is a
+            This is a starter kit for Vite + React and tailwindCSS(v4). It is a
             simple and easy to use starter kit for your next project. It was
             built in react-router-dom, react-icons, and react-helmet-async along
             with the built in routing components and file structure.
