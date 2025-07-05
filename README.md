@@ -1,102 +1,59 @@
-# Vite + React + TailwindCSS(4) Starter Kit
+# Vite + React + TailwindCSS (v4) Starter Kit
 
 ---
 
-## Getting Started`*`
+## 📦 Branches & Variants
 
-### 1. Clone this repo`*`
+- **`main` branch (React 18 LTS):**
+  - Stable, production-ready with React 18 and latest dependencies.
+  - [Repo URL](https://github.com/purnasth/vite-react-tailwind-starter-kit/)
+
+- **`chore/upgrade-react-19` branch:**
+  - Experimental, includes React 19 and the latest versions of all dependencies.
+  - [Repo URL](https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/chore/upgrade-react-19)
+  - _Use this branch if you want to try the newest React features and updates._
+
+
+- **Other variants:**
+  - **`vrt`** — _Vite + React + TailwindCSS (JSX only)_  
+    [Repo URL](https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt)
+  - **`vrt-ts`** — _Vite + React + TailwindCSS (TypeScript)_  
+    [Repo URL](https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts)
+  - **`tailwind-v3`** — _Vite + React + TailwindCSS v3_  
+    [Repo URL](https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/tailwind-v3)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```sh
 git clone https://github.com/purnasth/vite-react-tailwind-starter.git
+cd vite-react-tailwind-starter-kit
 ```
 
-### &rarr; for `jsx`
-
-<!-- how to print arrow in markdown ?
-https://stackoverflow.com/questions/30003353/how-to-write-an-arrow-in-markdown 
- -->
-
-```sh
-git checkout vrt
-```
-
-#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt
-
-### &rarr; for `TypeScript`
-
-```sh
-git checkout vrt-ts
-```
-
-#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/vrt-ts
-
-### &rarr; for `react-with-tailwind(v3)`
-
-```sh
-git checkout tailwind-v3
-```
-
-#### Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/tree/tailwind-v3
-
----
-
-### 2. Install and Run`*`
-
-Run the following commands in your terminal:
+### 2. Install dependencies
 
 ```sh
 pnpm install
-pnpm run dev
 ```
 
-- <b><em>`pnpm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
-- <b><em>`pnpm run dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
-
----
-
-## Getting Started`*`
-
-### 1. Clone this repo`*`
+### 3. Start the development server
 
 ```sh
-git clone https://github.com/purnasth/vite-react-tailwind-starter.git
-```
-
-
-### &rarr; for `pnpm TypeScript + Tailwindcss + Prettier (Auto Formatting)`
-
-```sh
-the `main` branch
-```
-
-#### &rarr; Repo Url: https://github.com/purnasth/vite-react-tailwind-starter-kit/
-
-#
-
-### 2. Install and Run`*`
-
-Run the following commands in your terminal:
-
-```sh
-pnpm install
 pnpm dev
 ```
 
-- <b><em>`pnpm install`</em></b> to install the node_modules on your local repo which has been .gitignore in this github repo.
-- <b><em>`pnpm dev`</em></b> for running this in your browser, by default it opens in port http://localhost:5173/
+The app will be available at [http://localhost:5173](http://localhost:5173).
 
 ---
 
+## 🛠️ Manual Setup (from scratch)
 
-## Codes Used
+> _Skip this section if you cloned the repo above. This is for those who want to create a similar project from scratch._
 
-<b>`NOTE:`
-<em>
-Please disregard these below provided codes if you've already completed the first two steps of the "Getting Started" section. It's only meant for those interested in manually creating a project from scratch with Vite + React, Typescript, TailwindCSS and Prettier (Auto Formatting) with pnpm.
-</em>
-</b>
-
-### Install vite + react
+### 1. Create a new Vite + React project
 
 ```sh
 pnpm create vite@latest ./ --template react
@@ -107,49 +64,38 @@ pnpm install
 pnpm run dev
 ```
 
-```sh
-npm run dev -- --host
-```
-
-### Install tailwindCSS
+### 2. Install TailwindCSS
 
 ```sh
 pnpm install tailwindcss @tailwindcss/vite
 ```
 
-### Configure the Vite plugin `vite.config.ts`
-Update the file `vite.config.ts` file:
+### 3. Configure the Vite plugin (`vite.config.ts`)
+
 ```ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 });
 ```
 
-### Import Tailwind CSS styles `index.css`
-Create a file named `index.css` in the `src` directory and add the following lines:
-```css
-@import "tailwindcss";
-```
-`NOTE`: In case you are migrating from tailwindcss v3.4 to v4.0, link your existing `tailwind.config.js` file to the new `index.css` file.
+### 4. Import Tailwind CSS styles (`src/index.css`)
 
 ```css
+@import "tailwindcss";
 @config "../tailwind.config.js";
 ```
 
-### Install Prettier
+### 5. Install and configure Prettier
 
 ```sh
-pnpm install -D prettier
+pnpm install -D prettier prettier-plugin-tailwindcss
 ```
 
-### Add Prettier Config
-
-Create a file named `.prettierrc` in the root directory and add the following lines:
+Create a `.prettierrc` file:
 
 ```json
 {
@@ -162,60 +108,26 @@ Create a file named `.prettierrc` in the root directory and add the following li
 }
 ```
 
-### Add Prettier Scripts
-
-Add the following lines to the `scripts` object in your `package.json` file:
+Add scripts to `package.json`:
 
 ```json
-"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-"format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+"format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+"format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
 ```
-
-### Run Prettier
-
-```sh
-pnpm run format
-```
-
-### Auto Formatting with Prettier
-
-```sh
-pnpm i -D prettier prettier-plugin-tailwindcss
-```
-
-<b>`NOTE:`
-<em>
-Enable the `formatOnSave` option in your editor to auto-format your code with Prettier. You can also run the `pnpm run format` command to format your code. 
-Cheers! Now on every save, your code will be auto-formatted. Congratulations! 
-</em>
-</b>
-
 
 ---
 
-## Libraries `pnpm`
+## 📚 Useful Libraries
 
-```
-pnpm install react-router-dom
-pnpm install react-icons
-```
-<!-- pnpm install react-router-dom
-pnpm install react-icons
-pnpm install react-helmet
-pnpm install react-query
-pnpm install react-toastify
-pnpm install react-modal
-pnpm install react-select
-pnpm install react-datepicker
-pnpm install react-table
-pnpm install react-hook-form
-pnpm install react-markdown
-pnpm install react-syntax-highlighter
-pnpm install react-draggable
-pnpm install react-beautiful-dnd
-pnpm install react-spring
-pnpm install react-use
-pnpm install react-use-gesture
-pnpm install react-use-measure -->
+- `react-router-dom` — Routing
+- `react-icons` — Icon library
 
-⭐ Star this repo on GitHub — it helps!
+Install with:
+
+```sh
+pnpm install react-router-dom react-icons
+```
+
+---
+
+## ⭐ Star this repo on GitHub — it helps!
